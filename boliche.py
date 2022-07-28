@@ -11,7 +11,7 @@ pista = ['I', ' ', 'I', ' ', 'I', ' ', 'I', ' ', 'I', '\n',
 ' ', ' ', ' ', 'I', ' ', 'I', '\n',
 ' ', ' ', ' ', ' ','I', '\n',
 ]
- 
+print('Esta é a pista pronta para sua jogada ')
 posiçao_dos_pinos = {
     '1':38,
     '2':32,
@@ -32,29 +32,19 @@ posiçao_dos_pinos = {
 }
 
 mostra_pista(pista)
+print( 'Esta é a sequência numérica dos pinos')
 for pino, posiçao in posiçao_dos_pinos.items():
-    #posiçao = posiçao_dos_pinos[pino]
+    posiçao = posiçao_dos_pinos[pino]
     pista[posiçao] = pino
+
 mostra_pista(pista)  
 
-jogada = []
+jogada = ['3','5','9','11']
 
 for pino in jogada:
     posiçao = posiçao_dos_pinos[pino]
     pista[posiçao] = ' '
+mostra_pista(pista)  
+print('Não foi desta vez, você só derrubou 4 pinos')
+print()
     
-mostra_pista(pista)
-
-def sortear():
-    pista = {38,32,30,25,23,21,17,15,13,11,8,6,4,2,0}
-    
-    random.shuffle(pista)
-    posiçao_dos_pinos(str(pista[0]))
-    posiçao_dos_pinos(str(pista[1]))
-    posiçao_dos_pinos(str(pista[3]))
-
-
-    
-
-#print(random.randrange(1, 3))       
-#
